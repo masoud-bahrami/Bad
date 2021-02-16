@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Bad.Code;
 
-namespace ConsoleApp1
+namespace Bad.Code.Performances
 {
     public class Invoice
     {
@@ -51,7 +50,7 @@ namespace ConsoleApp1
                 volumeCredits += Math.Max(perf.Audience - 30, 0);
 
                 if (PlayType.Comedy == play.Type)
-                    volumeCredits += (perf.Audience / 10) * 1000;
+                    volumeCredits += perf.Audience / 10 * 1000;
 
                 result += $"{play.Name}: {thisAmount / 100} {perf.Audience}";
                 thisAmount += thisAmount;

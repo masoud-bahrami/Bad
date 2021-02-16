@@ -1,4 +1,4 @@
-﻿namespace Bad.Code
+﻿namespace Bad.Code.Performances
 {
     public class Play
     {
