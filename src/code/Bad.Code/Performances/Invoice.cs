@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Bad.Code;
 
-namespace ConsoleApp1
+namespace Bad.Code.Performances
 {
     public class Invoice
     {
