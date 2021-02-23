@@ -50,7 +50,7 @@ namespace Bad.Code.Performances
                 volumeCredits += Math.Max(perf.Audience - 30, 0);
 
                 if (PlayType.Comedy == play.Type)
-                    volumeCredits += (perf.Audience / 10) * 1000;
+                    volumeCredits += perf.Audience / 10 * 1000;
 
                 result += $"{play.Name}: {thisAmount / 100} {perf.Audience}";
                 thisAmount += thisAmount;
