@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._01MysteriousNames
+﻿namespace Bad.Code.BadSmells._01MysteriousNames
 {
     public interface ICustomerServices
     {

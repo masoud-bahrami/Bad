@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Bad.Code._01MysteriousNames
+namespace Bad.Code.BadSmells._01MysteriousNames
 {
     public class Calendar
     {

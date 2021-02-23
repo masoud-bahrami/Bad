@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._01MysteriousNames
+﻿namespace Bad.Code.BadSmells._01MysteriousNames
 {
     public class Invoice
     {
@@ -6,8 +6,6 @@
         public int GetInvoiceLimit()
         {
             return default;
-        }
-
-        
+        }        
     }
 }

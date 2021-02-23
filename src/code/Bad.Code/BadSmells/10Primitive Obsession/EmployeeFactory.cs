@@ -1,18 +1,17 @@
-﻿
-namespace Bad.Code._10Primitive_Obsession
+﻿namespace Bad.Code._10Primitive_Obsession
 {
     
     public class EmployeeFactory
     {
         public Employee CreateEmployee(string name, EmployeeType type)
         {
-            return new Employee { _name = name, Type = type };
+            return new Employee { Name = name, Type = type };
         }
     }
 
     public class Employee
     {
-        public string _name { get; set; }
+        public string Name { get; set; }
         public EmployeeType Type { get; set; }
     }
 
