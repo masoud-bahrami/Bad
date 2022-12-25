@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._16MessageChains
+﻿namespace Bad.Code.BadSmells._16MessageChains
 {
     public class Person
     {

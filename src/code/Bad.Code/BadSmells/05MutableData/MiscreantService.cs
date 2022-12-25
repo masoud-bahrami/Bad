@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Bad.Code._05MutableData
+namespace Bad.Code.BadSmells._05MutableData
 {
     public class MiscreantService
     {

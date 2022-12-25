@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._02DuplicatedCode
+﻿namespace Bad.Code.BadSmells._02DuplicatedCode
 {
     public class Class1
     {

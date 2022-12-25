@@ -2,38 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Bad.Code._02DuplicatedCode
+namespace Bad.Code.BadSmells._02DuplicatedCode
 {
     public class CustomerService
     {
         private readonly IList<Customer> _customers;
 
         public CustomerService(IList<Customer> customers)
-        {
-            _customers = customers;
-        }
+            => _customers = customers;
 
         public Customer GetCustomer(int id)
         {
-            var queryable = _customers.Where(c => c.TenantId == UserContext.TenantId).AsQueryable();
-            return queryable.FirstOrDefault(c => c.Id == id);
+            return _customers.Where(c => c.Id == id
+                                         && c.TenantId == UserContext.TenantId).FirstOrDefault();
         }
 
         public Customer GetCustomerByNationalCode(string nationalCode)
         {
-            return Queryable().FirstOrDefault(c => c.NationalCode == nationalCode);
+            return _customers.Where(x =>
+                     x.NationalCode == nationalCode
+                    && x.TenantId == UserContext.TenantId).FirstOrDefault();
         }
 
-        public Customer GetAllCustomers()
+        public List<Customer> GetAllCustomers()
         {
-            return Queryable().FirstOrDefault();
-        }
-
-        private IQueryable<Customer> Queryable()
-        {
-            return _customers.Where(c => c.TenantId == UserContext.TenantId).AsQueryable();
+            return _customers.Where(a => a.TenantId == UserContext.TenantId).ToList();
         }
         
+
     }
 
     public class UserContext

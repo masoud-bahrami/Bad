@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Bad.Code._11RepeatedSwitches
+namespace Bad.Code.BadSmells._11RepeatedSwitches
 {
 	public class Bird
     {
@@ -11,6 +11,7 @@ namespace Bad.Code._11RepeatedSwitches
         {
             _birdType = type;
         }
+
         public List<BirdColor> GetColors()
         {
             switch (_birdType)

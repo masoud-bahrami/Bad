@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bad.Code._03LongFunction
+namespace Bad.Code.BadSmells._03LongFunction
 {
     public static class DateTimeExtensions
     {

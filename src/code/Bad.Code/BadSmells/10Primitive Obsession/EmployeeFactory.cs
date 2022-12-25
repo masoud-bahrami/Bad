@@ -1,24 +1,58 @@
-﻿namespace Bad.Code._10Primitive_Obsession
+﻿using System;
+
+namespace Bad.Code.BadSmells._10Primitive_Obsession
 {
-    
+
     public class EmployeeFactory
     {
-        public Employee CreateEmployee(string name, EmployeeType type)
+        public Employee CreateEmployee(string name, string employeeType)
         {
-            return new Employee { Name = name, Type = type };
+            switch (employeeType)
+            {
+                case "Engineer":
+                    return new Enginner(name);
+                case "SalesMan":
+                    return new SalesMan(name);
+                case "Manager":
+                    return new Manager(name);
+                default:
+                    throw new ArgumentOutOfRangeException("employeeType");
+            }
         }
     }
 
-    public class Employee
+    public class Manager : Employee
     {
-        public string Name { get; set; }
-        public EmployeeType Type { get; set; }
+        public Manager(string name) : base(name)
+        {
+
+        }
     }
 
-    public enum EmployeeType
+    public class SalesMan : Employee
     {
-        Engineer,
-        SalesMan,
-        Manager
+        public SalesMan(string name) : base(name)
+        {
+
+        }
     }
+
+    public class Enginner : Employee
+    {
+        public Enginner(string name) : base(name)
+        {
+
+        }
+    }
+
+    public abstract class Employee
+    {
+        protected Employee(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; private set; }
+    }
+
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bad.Code._13LazyElement
+namespace Bad.Code.BadSmells._13LazyElement
 {
     public class OrderService
     {

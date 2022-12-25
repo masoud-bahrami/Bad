@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._05MutableData
+﻿namespace Bad.Code.BadSmells._05MutableData
 {
     public class Telephone
     {
@@ -12,12 +12,16 @@
 
         public void ChangeOfficeAreaCode(string newOfficeAreaCode)
         {
+            // first clear the old number!
+            Telephone.OfficeAreaCode = string.Empty;
             Telephone.OfficeAreaCode = newOfficeAreaCode;
         }
 
         public void ChangeOfficeNumber(string newOfficeNumber)
         {
-            Telephone.OfficeAreaCode = newOfficeNumber;
+            // first clear the old number!
+            Telephone.OfficeNumber = string.Empty;
+            Telephone.OfficeNumber = newOfficeNumber;
         }
 
     }

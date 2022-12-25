@@ -2,10 +2,10 @@
 {
     public class Invoice
     {
-        public int ItemsCount { get; set; }
-        public int GetInvoiceLimit()
+        public int itemsCnt { get; set; }
+        public int GetInvoicecount()
         {
-            return default;
+            return itemsCnt;
         }        
     }
 }

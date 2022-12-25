@@ -1,4 +1,6 @@
-﻿namespace Bad.Code._09DataClumps
+﻿using System;
+
+namespace Bad.Code.BadSmells._09DataClumps
 {
     public class Visa
     {
@@ -9,6 +11,17 @@
         {
             PriceAmount = amount;
             PriceCurrency = currency;
+        }
+
+        public decimal GetPriceToRial()
+        {
+            if(PriceCurrency == "Rial")
+                return PriceAmount;
+            if (PriceCurrency == "Toman")
+                return PriceAmount * 10;
+
+            throw new ArgumentOutOfRangeException("PriceCurrency");
+
         }
     }
 
@@ -22,5 +35,16 @@
             PriceAmount = amount;
             PriceCurrency = currency;
         }
+
+        public decimal GetPriceToRial()
+        {
+            if (PriceCurrency == "Rial")
+                return PriceAmount;
+            if (PriceCurrency == "Toman")
+                return PriceAmount * 10;
+
+            throw new ArgumentOutOfRangeException("PriceCurrency");
+        }
+
     }
 }

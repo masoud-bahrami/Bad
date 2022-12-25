@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Bad.Code._05MutableData;
+using Bad.Code.BadSmells._05MutableData;
 
-namespace Bad.Code._21Comments
+namespace Bad.Code.BadSmells._21Comments
 {
     public class InvoiceService
     {
+
         public void ApplyDiscount(int invoiceId, Discount discount)
         {
             Invoice invoice = RetrieveInvoice(invoiceId);
@@ -20,16 +21,23 @@ namespace Bad.Code._21Comments
 
         private Invoice RetrieveInvoice(int invoiceId)
         {
+
             return new Invoice();
         }
     }
 
     public class Invoice
     {
+        // orders in an invoice
         public List<Order> Orders { get; set; }
     }
 
+    /// <summary>
+    /// Created by Micheal!
+    /// Last edited by Alex on 1998-02-03 20:30:00 
+    /// </summary>
     public class Order
     {
+        public int Id { get; set; }
     }
 }

@@ -1,13 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
 
-  <ItemGroup>
-    <Compile Remove="15\**" />
-    <EmbeddedResource Remove="15\**" />
-    <None Remove="15\**" />
-  </ItemGroup>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 
 </Project>

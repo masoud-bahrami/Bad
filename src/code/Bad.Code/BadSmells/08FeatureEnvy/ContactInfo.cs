@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._08FeatureEnvy
+﻿namespace Bad.Code.BadSmells._08FeatureEnvy
 {
     public class ContactInfo
     {

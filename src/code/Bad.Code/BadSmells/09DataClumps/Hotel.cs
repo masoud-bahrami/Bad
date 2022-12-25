@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._09DataClumps
+﻿namespace Bad.Code.BadSmells._09DataClumps
 {
     public class Hotel
     {

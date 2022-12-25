@@ -2,15 +2,15 @@
 
 //Replace Derived Variable With Query
 
-namespace Bad.Code._05MutableData
+namespace Bad.Code.BadSmells._05MutableData
 {
 
     public class ProductionPlan
     {
-        private readonly List<Adjustment> _adjustments;
+        private readonly List<Plan> _adjustments;
         private decimal _production;
 
-        public ProductionPlan(List<Adjustment> adjustments)
+        public ProductionPlan(List<Plan> adjustments)
         {
             _adjustments = adjustments;
         }
@@ -20,15 +20,16 @@ namespace Bad.Code._05MutableData
             return _production;
         }
 
-        public void ApplyAdjustment(Adjustment anAdjustment)
+        public void ApplyAdjustment(Plan anPlan)
         {
-            this._adjustments.Add(anAdjustment);
-            this._production += anAdjustment.Amount;
+            this._adjustments.Add(anPlan);
+            this._production += anPlan.Amount;
         }
     }
 
-    public class Adjustment
+    public class Plan
     {
         public decimal Amount;
+        public object Product;
     }
 }

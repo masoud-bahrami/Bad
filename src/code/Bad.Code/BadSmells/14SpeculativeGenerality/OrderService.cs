@@ -1,4 +1,4 @@
-﻿namespace Bad.Code._14SpeculativeGenerality
+﻿namespace Bad.Code.BadSmells._14SpeculativeGenerality
 {
     public class OrderService
     {
